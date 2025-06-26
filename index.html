@@ -84,9 +84,39 @@
       <strong>표시 가격의 50%만 결제하시면 됩니다.</strong><br>
       <p> 구매 원하시는 제품은 아래 카카오톡으로 문의해주세요. <p>
 
-<p style="font-size: 36px; font-family: 'Arial', sans-serif; margin-bottom: 30px;">
-  🐻✨ 상품 보러가기 ✨🐻
-  <br>👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+<style>
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+@keyframes color-pop {
+  0%, 100% { color: #ff69b4; text-shadow: 2px 2px 5px pink; }
+  50% { color: #ff1493; text-shadow: 2px 2px 10px #ffb6c1; }
+}
+
+.shiny-text {
+  animation: color-pop 1.5s infinite alternate, shake 1.5s infinite;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+</style>
+
+<!-- 텍스트 내용 -->
+<p>────────────────────────────</p>
+<p>
+  모든 상품은 쿠팡 링크에서 확인 가능하며,<br>
+  <strong>표시 가격의 50%만 결제하시면 됩니다.</strong><br>
+</p>
+<p>구매 원하시는 제품은 아래 카카오톡으로 문의해주세요.</p>
+
+<!-- 애니메이션 텍스트 -->
+<p class="shiny-text">
+  🐻✨ 상품 보러가기 ✨🐻<br>
+  👇👇👇👇👇👇👇👇👇👇👇👇👇👇
 </p>
 
 <!-- 귀엽고 큼직한 버튼 -->
