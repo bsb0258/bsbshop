@@ -2,13 +2,86 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>상품 목록 - BSB SHOP</title>
-  <link rel="stylesheet" href="style.css">
+  <title>BSB SHOP - 상품 목록</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-card .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .product-card .price {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .product-card .sale-price {
+      font-size: 16px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .product-card .desc {
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .stock {
+      font-size: 13px;
+      margin-top: 8px;
+      color: green;
+    }
+
+    .product-card a {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<h1>📦 BSB SHOP - 상품 리스트</h1>
+<body>
+
+  <h1>📦 BSB SHOP</h1>
 <br><br>
-<br><br>
-  <a href="index.html" 
+<a href="index.html" 
    style="
      display: inline-block;
      margin-top: 40px;
@@ -27,36 +100,51 @@
    onmouseout="this.style.backgroundColor='#ffa07a';">
    🏠 메인으로 가기
 </a>
-<br><br>
-<br><br>
-<!-- 🔹 상품 1: 접이식 냉풍기 -->
-  <div class="product-card">
-    <img src="민루플 냉풍기.jpg" alt="휴대용 접이식 냉풍기">
-    <div class="title">
-      <span style="font-size: 40px; font-weight: bold;">😊 휴대용 접이식 냉풍기 😊</span>
-      <span style="font-size: 28px;">쿠팡가격: 17,800원</span>
-      <span style="font-size: 32px; font-weight: bold; color: red;">(판매가: 8,900원)</span>
-      <span style="font-size: 24px;">에어컨 바람처럼 시원한 바람~</span>
-    </div>
-    <div class="stock">🟢 재고: 파랑 4개 / 보라 1개 / 흰색 2개 🟢</div>
-    <a href="https://www.coupang.com/vp/products/8814517120" target="_blank" class="shine-text">
-      👇 제품 설명, 리뷰, 가격 보러가기 👇
-    </a>
-  </div>
 
-  <!-- 🔹 상품 2: 전기 모기채 -->
-  <div class="product-card">
-    <img src="모기채.jpg" alt="전기 모기채">
-    <div class="title">
-      <span style="font-size: 40px; font-weight: bold;">😊 전기 모기채 😊</span>
-      <span style="font-size: 28px;">쿠팡가격: 17,800원</span>
-      <span style="font-size: 32px; font-weight: bold; color: red;">(판매가: 8,900원)</span>
-      <span style="font-size: 24px;">C타입으로 충전하는 전기 모기채!</span>
+  <div class="grid-container">
+    <!-- 상품 카드 1 -->
+    <div class="product-card">
+      <img src="민루플 냉풍기.jpg" alt="냉풍기">
+      <div class="title">😊 냉풍기 😊</div>
+      <div class="price">쿠팡가: 17,800원</div>
+      <div class="sale-price">(판매가: 8,900원)</div>
+      <div class="desc">에어컨처럼 시원한 바람~</div>
+      <div class="stock">🟢 파랑 3개 / 보라 1개</div>
+      <a href="https://www.coupang.com/vp/products/8814517120" target="_blank">👉 자세히 보기</a>
     </div>
-    <div class="stock">🟢 재고: 흰색 5개 🟢</div>
-    <a href="https://www.coupang.com/vp/products/8737034356?itemId=25392807760&vendorItemId=92369996241" target="_blank" class="shine-text">
-      👇 제품 설명, 리뷰, 가격 보러가기 👇
-    </a>
+
+    <!-- 상품 카드 2 -->
+    <div class="product-card">
+      <img src="모기채.jpg" alt="모기채">
+      <div class="title">😊 전기 모기채 😊</div>
+      <div class="price">쿠팡가: 17,800원</div>
+      <div class="sale-price">(판매가: 8,900원)</div>
+      <div class="desc">C타입 충전식</div>
+      <div class="stock">🟢 흰색 5개</div>
+      <a href="https://www.coupang.com/vp/products/8737034356" target="_blank">👉 자세히 보기</a>
+    </div>
+
+    <!-- 상품 카드 3 -->
+    <div class="product-card">
+      <img src="example3.jpg" alt="상품3">
+      <div class="title">😊 상품3 😊</div>
+      <div class="price">쿠팡가: 15,000원</div>
+      <div class="sale-price">(판매가: 7,500원)</div>
+      <div class="desc">상품 설명 예시</div>
+      <div class="stock">🟢 재고 2개</div>
+      <a href="#">👉 자세히 보기</a>
+    </div>
+
+    <!-- 상품 카드 4 -->
+    <div class="product-card">
+      <img src="example4.jpg" alt="상품4">
+      <div class="title">😊 상품4 😊</div>
+      <div class="price">쿠팡가: 19,000원</div>
+      <div class="sale-price">(판매가: 9,500원)</div>
+      <div class="desc">상품 설명 예시</div>
+      <div class="stock">🟢 재고 1개</div>
+      <a href="#">👉 자세히 보기</a>
+    </div>
   </div>
 
 </body>
